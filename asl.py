@@ -166,7 +166,7 @@ def __init__():
   last = False
 
   # Parsing the dynamic fields from the entry
-  while offset <= last_offset and last == False:
+  while last == False:
     # The heap of the entry is saved to try to avoid seek (performance issue)
     dynamic_start = f.tell()
     dynamic_part = f.read(offset - f.tell())
